@@ -10,7 +10,7 @@ import cv2
 from opts import opts
 from detectors.detector_factory import detector_factory
 
-image_ext = ['jpg', 'jpeg', 'png', 'webp']
+image_ext = ['jpg', 'jpeg', 'png', 'webp', 'bmp']
 video_ext = ['mp4', 'mov', 'avi', 'mkv']
 time_stats = ['tot', 'load', 'pre', 'net', 'dec', 'post', 'merge']
 

@@ -43,6 +43,8 @@ class Debugger(object):
         (255, 0, 0), (0, 0, 255)]
     elif num_classes == 80 or dataset == 'coco':
       self.names = coco_class_name
+    elif num_classes == 16 or dataset == 'coco_bill':
+        self.names = coco_bill_class_name
     elif num_classes == 20 or dataset == 'pascal':
       self.names = pascal_class_name
     elif dataset == 'gta':
@@ -439,6 +441,8 @@ gta_class_name = [
 pascal_class_name = ["aeroplane", "bicycle", "bird", "boat", "bottle", "bus", 
   "car", "cat", "chair", "cow", "diningtable", "dog", "horse", "motorbike", 
   "person", "pottedplant", "sheep", "sofa", "train", "tvmonitor"]
+
+coco_bill_class_name = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16']
 
 coco_class_name = [
      'person', 'bicycle', 'car', 'motorcycle', 'airplane',
