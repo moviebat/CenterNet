@@ -14,6 +14,7 @@ import torch.utils.data as data
 class COCO_BILL(data.Dataset):
     num_classes = 16
     default_resolution = [320, 512]
+    #default_resolution = [600, 960]
     mean = np.array([0.03248337, 0.33954524, 0.15064196],
                     dtype=np.float32).reshape(1, 1, 3)
     std = np.array([0.10119884, 0.16578916, 0.10734225],
