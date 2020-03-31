@@ -37,7 +37,8 @@ cocoGt=COCO(annFile)
 
 
 #initialize COCO detections api
-resFile='/home/zealens/dyq/CenterNet/exp/ctdet/coco_bill_mbv2/results.json'
+#resFile='/home/zealens/dyq/CenterNet/exp/ctdet/coco_bill_mbv2/results.json'
+resFile='/home/zealens/dyq/CenterNet/exp/ctdet/coco_bill_res_101/results.json'
 #resFile = resFile%(dataDir, prefix, dataType, annType)
 cocoDt=cocoGt.loadRes(resFile)
 
@@ -63,3 +64,26 @@ cocoEval.evaluate()
 cocoEval.accumulate()
 cocoEval.summarize()
 
+# running evaluation
+cocoEval = COCOeval(cocoGt,cocoDt,annType)
+cocoEval.params.imgIds  = imgIds
+cocoEval.params.catIds = [13]
+cocoEval.evaluate()
+cocoEval.accumulate()
+cocoEval.summarize()
+
+# running evaluation
+cocoEval = COCOeval(cocoGt,cocoDt,annType)
+cocoEval.params.imgIds  = imgIds
+cocoEval.params.catIds = [14]
+cocoEval.evaluate()
+cocoEval.accumulate()
+cocoEval.summarize()
+
+# running evaluation
+cocoEval = COCOeval(cocoGt,cocoDt,annType)
+cocoEval.params.imgIds  = imgIds
+cocoEval.params.catIds = [15]
+cocoEval.evaluate()
+cocoEval.accumulate()
+cocoEval.summarize()
